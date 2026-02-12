@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Quick Links Column 1 */}
           <div>
-            <img src={logo} alt="" className='h-40 w-32' />
+            <img src={logo} alt="" className='h-32 w-32' />
             <p>BHOJ University, Bhopal</p>
             <p>One of the most prestigious University around the country.</p>
           </div>

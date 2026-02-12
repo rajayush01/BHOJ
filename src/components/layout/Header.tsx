@@ -136,14 +136,18 @@ export default function Header() {
 		>
 			{/* Top Utility Bar */}
 			<div className="bg-[#B8860B] text-white">
-				<div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16">
-					<div className="flex justify-between items-center h-12 text-sm">
+				<div className="max-w-full mx-auto px-2 sm:px-4 lg:px-16">
+					<div className="flex justify-between items-center h-10 sm:h-12 text-xs sm:text-sm">
 						{/* Left Side - Accessibility Links */}
-						<div className="flex items-center space-x-4">
-							<button className="hover:underline border-r border-[#A0750A] pr-4">
-								Screen Reader Access
+						<div className="flex items-center space-x-1 sm:space-x-4">
+							<button className="hover:underline border-r border-[#A0750A] pr-1 sm:pr-4 text-[10px] sm:text-xs md:text-sm whitespace-nowrap">
+								<span className="hidden sm:inline">Screen Reader Access</span>
+								<span className="sm:hidden">Reader</span>
 							</button>
-							<button className="hover:underline">Skip To Main Content</button>
+							<button className="hover:underline text-[10px] sm:text-xs md:text-sm whitespace-nowrap">
+								<span className="hidden sm:inline">Skip To Main Content</span>
+								<span className="sm:hidden">Skip</span>
+							</button>
 						</div>
 
 						{/* Center - Search Bar */}
@@ -154,38 +158,38 @@ export default function Header() {
 									placeholder="Search..."
 									value={searchQuery}
 									onChange={(e) => setSearchQuery(e.target.value)}
-									className="px-4 py-1.5 pr-10 rounded text-gray-700 focus:outline-none focus:ring-2 focus:ring-white w-64"
+									className="px-4 py-1.5 pr-10 rounded text-gray-700 focus:outline-none focus:ring-2 focus:ring-white w-48 lg:w-64"
 								/>
 								<button className="absolute right-0 top-0 bottom-0 px-3 bg-white hover:bg-gray-100 rounded-r">
 									<Search className="w-4 h-4 text-gray-700" />
-								</button>
+								</button>	
 							</div>
 						</div>
 
 						{/* Right Side - Language & Font Controls */}
-						<div className="flex items-center space-x-2">
-							<select className="bg-white text-gray-700 px-3 py-1.5 rounded text-sm focus:outline-none border-r border-[#A0750A] pr-4">
-								<option>Select Language</option>
+						<div className="flex items-center space-x-1 sm:space-x-2">
+							<select className="bg-white text-gray-700 px-1 sm:px-3 py-1 sm:py-1.5 rounded text-[10px] sm:text-sm focus:outline-none border-r border-[#A0750A] pr-2 sm:pr-4">
+								<option>Lang</option>
 								<option>English</option>
 								<option>हिंदी</option>
 							</select>
 							<button
 								onClick={increaseFontSize}
-								className="px-2 py-1 hover:bg-[#A0750A] rounded border-r border-[#A0750A]"
+								className="px-1 sm:px-2 py-1 hover:bg-[#A0750A] rounded border-r border-[#A0750A] text-[10px] sm:text-sm"
 								title="Increase font size"
 							>
 								+A
 							</button>
 							<button
 								onClick={resetFontSize}
-								className="px-2 py-1 hover:bg-[#A0750A] rounded border-r border-[#A0750A]"
+								className="px-1 sm:px-2 py-1 hover:bg-[#A0750A] rounded border-r border-[#A0750A] text-[10px] sm:text-sm"
 								title="Reset font size"
 							>
 								A
 							</button>
 							<button
 								onClick={decreaseFontSize}
-								className="px-2 py-1 hover:bg-[#A0750A] rounded"
+								className="px-1 sm:px-2 py-1 hover:bg-[#A0750A] rounded text-[10px] sm:text-sm"
 								title="Decrease font size"
 							>
 								-A
@@ -200,20 +204,20 @@ export default function Header() {
 				<div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16">
 					<div className="flex justify-between items-center py-4">
 						{/* Left - Logos */}
-						<div className="flex items-center space-x-6">
-							{/* NAAC Badge - You'll need to add this image */}
+						<div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
+							{/* NAAC Badge */}
 							<div className="flex-shrink-0">
 								<img
 									src={naac}
 									alt="NAAC A Grade"
-									className="h-20 w-20 object-contain"
+									className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-contain"
 								/>
 							</div>
 
 							{/* University Logo */}
 							<Link to="/" onClick={handleLogoClick} className="flex items-center">
 								<div className="flex-shrink-0">
-									<img src={logo} alt="BHOJ University Logo" className="h-20 w-20 object-contain" />
+									<img src={logo} alt="BHOJ University Logo" className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-contain" />
 								</div>
 							</Link>
 
@@ -245,7 +249,7 @@ export default function Header() {
 							<button className="bg-[#4F46E5] hover:bg-[#4338CA] text-white px-6 py-2 rounded-full font-medium transition-colors">
 								AICTE
 							</button>
-							{/* Statue Image - You'll need to add this */}
+							{/* Statue Image */}
 							<div className="ml-4">
 								<img
 									src={statue}
