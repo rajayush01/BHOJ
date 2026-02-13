@@ -12,6 +12,8 @@ import VisionMission from './pages/VisionMission';
 import Values from './pages/Values';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Gallery from './pages/Gallery';
+import ChancellorMessagePage from './components/home/Chancellormessagepage';
+import ViceChancellorMessagePage from './components/home/ViceChancellormessagepage';
 
 const Home = lazy(() => import('./pages/Home'));
 // const Legacy = lazy(() => import('./pages/Legacy'));
@@ -69,6 +71,8 @@ function App() {
 					<Route path="/vision-mission" element={<VisionMission />} />
 					<Route path="/values" element={<Values />} />
 					<Route path="/gallery" element={<Gallery />} />
+					<Route path="/chancellor-message" element={<ChancellorMessagePage />} />
+					<Route path="/vice-chancellor-message" element={<ViceChancellorMessagePage />} />
 
 				</Route>
 				<Route

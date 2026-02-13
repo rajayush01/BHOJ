@@ -1,14 +1,15 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import img1 from "../../assets/logo_main.jpg"
+import img2 from "../../assets/header-img.jpg"
 
 const About: React.FC = ( ) => {
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header with accent line */}
-        <div className="mb-12">
+        <div className="mb-12 flex flex-col justify-center items-center">
           <div className="w-24 h-1 bg-[#B8860B] mb-6"></div>
           <h2 className="text-5xl font-bold text-[#1e3a8a] mb-4">
             About the University
@@ -18,15 +19,25 @@ const About: React.FC = ( ) => {
           </p>
         </div>
 
-        {/* Two Column Layout */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-          {/* Left: Image */}
+        {/* Images Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Image 1 - Logo */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] to-[#B8860B] opacity-10 rounded-lg transform group-hover:scale-105 transition-transform duration-300"></div>
             <img
-              src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80"
+              src={img1}
+              alt="MPBOU Logo"
+              className="w-full h-[350px] object-contain bg-white rounded-lg shadow-2xl p-8"
+            />
+          </div>
+
+          {/* Image 2 - Header Image */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] to-[#B8860B] opacity-10 rounded-lg transform group-hover:scale-105 transition-transform duration-300"></div>
+            <img
+              src={img2}
               alt="University Campus"
-              className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
+              className="w-full h-[350px] object-contain rounded-lg shadow-2xl"
             />
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg">
               <div className="flex items-center gap-4">
@@ -42,35 +53,43 @@ const About: React.FC = ( ) => {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Right: Content */}
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg border-l-4 border-[#1e3a8a] shadow-lg">
-              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Our Foundation</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Madhya Pradesh Bhoj (Open) University (MPBOU) was inaugurated by President Dr. Shankar Dayal Sharma on October 19, 1992, under the Madhya Pradesh University Act 1991.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                The university's emblem draws inspiration from a verse in Raja Bhoj's <span className="font-semibold italic">"Saraswati Kanthabharan"</span> — a testament to our rich cultural heritage.
-              </p>
+        {/* Content Section */}
+        <div className="mb-12">
+          <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg border-l-4 border-[#1e3a8a] shadow-lg mb-6">
+            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Our Foundation</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Madhya Pradesh Bhoj (Open) University (MPBOU) was inaugurated by President Dr. Shankar Dayal Sharma on October 19, 1992, under the Madhya Pradesh University Act 1991.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              The university's emblem draws inspiration from a verse in Raja Bhoj's <span className="font-semibold italic">"Saraswati Kanthabharan"</span> — a testament to our rich cultural heritage.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-[#1e3a8a] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
+              <p className="text-3xl font-bold mb-2">30+</p>
+              <p className="text-sm">Years of Excellence</p>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#1e3a8a] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
-                <p className="text-3xl font-bold mb-2">30+</p>
-                <p className="text-sm">Years of Excellence</p>
-              </div>
-              <div className="bg-[#B8860B] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
-                <p className="text-3xl font-bold mb-2">UGC</p>
-                <p className="text-sm">Recognized</p>
-              </div>
+            <div className="bg-[#B8860B] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
+              <p className="text-3xl font-bold mb-2">UGC</p>
+              <p className="text-sm">Recognized</p>
+            </div>
+            <div className="bg-[#1e3a8a] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
+              <p className="text-3xl font-bold mb-2">11</p>
+              <p className="text-sm">Regional Centers</p>
+            </div>
+            <div className="bg-[#B8860B] p-6 rounded-lg text-white text-center transform hover:scale-105 transition-transform duration-300">
+              <p className="text-3xl font-bold mb-2">612</p>
+              <p className="text-sm">Study Centers</p>
             </div>
           </div>
         </div>
 
         {/* Key Highlights */}
         <div className="bg-gradient-to-r from-[#1e3a8a] to-[#1e3a8a]/90 rounded-lg p-8 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">Our Mission</h3>
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Our Mission</h3>
           <div className="grid md:grid-cols-2 gap-6 text-white">
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-[#B8860B] rounded-full mt-2 flex-shrink-0"></div>

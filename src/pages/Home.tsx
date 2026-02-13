@@ -7,6 +7,8 @@ import ImpLinks from '@/components/home/ImpLinks'
 import About from '@/components/home/About'
 import UniversitySongs from '@/components/home/UniversitySongs'
 import GalleryPreview from '@/components/home/GalleryPreview'
+import ChancellorNoticesSection from '@/components/home/ChancellorNoticesSection'
+import ViceChancellorNoticesSection from '@/components/home/ViceChancellorNoticesSection'
 
 
 const Home = () => {
@@ -14,6 +16,10 @@ const Home = () => {
     <div className="antialiased bg-white">
       {/* NO FLOATING BUTTON COMPONENT HERE! It's already in App.tsx */}
       <HeroSection />
+      <div className='flex flex-col px-10 gap-10'>
+        <ChancellorNoticesSection/>
+        <ViceChancellorNoticesSection/>
+      </div>
       <About/>
       <StatsSection />
       <EventsSection />
