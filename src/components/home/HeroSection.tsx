@@ -181,19 +181,11 @@ const HeroSection = () => {
 
       {/* VC's Message Section - Below Slider */}
       <div className="relative bg-white py-12 md:py-16">
-        {/* Background Decoration */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-blue-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-400 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ">
             {/* VC Photo Section */}
             <div className="flex-shrink-0">
               <div className="relative">
-                {/* Glowing Ring */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#1e3a8a] via-purple-600 to-[#1e3a8a] rounded-full blur-lg opacity-75 animate-pulse"></div>
                 
                 {/* Photo Container */}
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white">
@@ -209,9 +201,6 @@ const HeroSection = () => {
                   <Quote className="w-8 h-8 text-white" />
                 </div>
 
-                {/* Sparkle Decoration */}
-                <Sparkles className="absolute -top-4 -left-4 w-8 h-8 text-yellow-400 animate-pulse" />
-                <Sparkles className="absolute -top-2 right-8 w-6 h-6 text-blue-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
               </div>
             </div>
 

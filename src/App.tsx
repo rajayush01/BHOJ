@@ -6,6 +6,12 @@ import NotFound from './pages/NotFound';
 import DPSLoading from './components/ui/Loading';
 import FloatingButtons from './pages/FloatingButtons';
 import AllInfoPage from './pages/AllInfoPage';
+import AdmissionForm from './pages/AdmissionForm';
+import AboutPage from './pages/AboutPage';
+import VisionMission from './pages/VisionMission';
+import Values from './pages/Values';
+import ScrollToTop from './components/ui/ScrollToTop';
+import Gallery from './pages/Gallery';
 
 const Home = lazy(() => import('./pages/Home'));
 // const Legacy = lazy(() => import('./pages/Legacy'));
@@ -45,7 +51,7 @@ function App() {
 				</div>
 			}
 		>
-			{/* CHANGED: Single FloatingButtons component instead of FloatingEnquiryButton */}
+			<ScrollToTop/>
 			<FloatingButtons />
 			<Routes>
 				<Route
@@ -58,7 +64,12 @@ function App() {
 				>
 					<Route index element={<Home />} />
 					<Route path="/all-info/:department" element={<AllInfoPage />} />
-					
+					<Route path="/admission-form" element={<AdmissionForm />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/vision-mission" element={<VisionMission />} />
+					<Route path="/values" element={<Values />} />
+					<Route path="/gallery" element={<Gallery />} />
+
 				</Route>
 				<Route
 					path="/404"

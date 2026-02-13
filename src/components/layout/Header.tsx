@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo_bhoj.png';
-import naac from '../../assets/logo_main.jpg';
-import statue from '../../assets/header-img.jpg';
 
 
 interface NavLink {
@@ -24,8 +22,8 @@ const navLinks: NavLink[] = [
 		hasDropdown: true,
 		dropdownItems: [
 			{ label: 'Overview', href: '/about' },
-			{ label: 'Mission & Vision', href: '/about/legacy' },
-			{ label: 'Leadership', href: '/about/leadership' },
+			{ label: 'Mission & Vision', href: '/vision-mission' },
+			{ label: 'Values', href: '/values' },
 			{ label: 'Accreditations', href: '/about/accreditations' },
 		],
 	},
@@ -70,7 +68,7 @@ const navLinks: NavLink[] = [
 		label: 'Admissions',
 		hasDropdown: true,
 		dropdownItems: [
-			{ label: 'Apply Online', href: '/admission' },
+			{ label: 'Admission Form', href: '/admission-form' },
 			{ label: 'Admission Process', href: '/admission/process' },
 			{ label: 'Eligibility', href: '/admission/eligibility' },
 			{ label: 'Fee Structure', href: '/admission/fees' },
@@ -206,13 +204,13 @@ export default function Header() {
 						{/* Left - Logos */}
 						<div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
 							{/* NAAC Badge */}
-							<div className="flex-shrink-0">
+							{/* <div className="flex-shrink-0">
 								<img
 									src={naac}
 									alt="NAAC A Grade"
 									className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-contain"
 								/>
-							</div>
+							</div> */}
 
 							{/* University Logo */}
 							<Link to="/" onClick={handleLogoClick} className="flex items-center">
@@ -250,13 +248,13 @@ export default function Header() {
 								AICTE
 							</button>
 							{/* Statue Image */}
-							<div className="ml-4">
+							{/* <div className="ml-4">
 								<img
 									src={statue}
 									alt="Statue"
 									className="h-20 w-16 object-cover rounded"
 								/>
-							</div>
+							</div> */}
 						</div>
 
 						{/* Mobile Menu Button */}
