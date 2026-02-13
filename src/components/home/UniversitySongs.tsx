@@ -7,8 +7,8 @@ interface UniversitySongSectionProps {
 }
 
 const UniversitySongs: React.FC<UniversitySongSectionProps> = ({
-  videoId = 'SnDQjCKGKRg', // Replace with actual video ID
-  title = 'Our University Anthem',
+  videoId = 'SnDQjCKGKRg',
+  title = 'Our University Song',
   description = 'Experience the spirit and pride of our institution through our cherished university song.'
 }) => {
   return (

@@ -12,9 +12,9 @@ const About: React.FC = ( ) => {
         <div className="mb-12 flex flex-col justify-center items-center">
           <div className="w-24 h-1 bg-[#B8860B] mb-6"></div>
           <h2 className="text-5xl font-bold text-[#1e3a8a] mb-4">
-            About the University
+            Welcome to Madhya Pradesh Bhoj (Open) University
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl leading-relaxed text-center">
             Established on October 1, 1992, MPBOU stands as a beacon of inclusive education and transformative learning.
           </p>
         </div>

@@ -16,11 +16,11 @@ const Home = () => {
     <div className="antialiased bg-white">
       {/* NO FLOATING BUTTON COMPONENT HERE! It's already in App.tsx */}
       <HeroSection />
+      <About/>
       <div className='flex flex-col px-10 gap-10'>
         <ChancellorNoticesSection/>
         <ViceChancellorNoticesSection/>
       </div>
-      <About/>
       <StatsSection />
       <EventsSection />
 
